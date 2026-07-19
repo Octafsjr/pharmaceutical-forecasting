@@ -18,12 +18,16 @@ Pharmaceutical forecasting; Time series analysis; Deep learning; ARIMA; SARIMA; 
 
 • Comprehensive comparison between classical statistical and deep learning forecasting models for pharmaceutical
 deviation prediction.
+
 • Evaluation of Holt-Winters, ARIMA, SARIMA, MLP, RNN, and GRU models under a consistent experimental
 framework.
+
 • Neural network-based approaches significantly outperform classical models in forecasting accuracy and nonlinear
 pattern learning.
+
 • RNN achieved the best numerical forecasting performance, with approximately 58.2% RMSE reduction compared with
 SARIMA.
+
 • Residualanalysisconfirmedlowererrordispersionandmoreconsistentforecastingbehaviorofneuralnetworkmodels.
 
 ## 📌 Project Overview
