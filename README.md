@@ -2,15 +2,13 @@
 
 ## 📄 Abstract
 
-This study investigates the forecasting of pharmaceutical quality deviation occurrences using classical statistical models and artificial neural network-based approaches. The main objective is to compare the predictive performance of Holt-Winters, ARIMA, and SARIMA models against neural network architectures, including Multilayer Perceptron (MLP), Recurrent Neural Network (RNN), and Gated Recurrent Unit (GRU).
+Quality deviation monitoring is a critical component of pharmaceutical manufacturing under Good Manufacturing Practice (GMP) regulations, as the early identification of abnormal patterns can support proactive quality management and regulatory compliance. This study investigates the forecasting of weekly pharmaceutical deviation occurrences using a comparative framework between classical statistical models and artificial neural network-based approaches.
 
-The models were evaluated using a real-world pharmaceutical manufacturing dataset collected from a GMP-regulated environment. A consistent experimental framework was adopted, using the same training and testing conditions for all approaches. Forecasting performance was assessed using multiple error metrics, including RMSE, MAE, MAPE, sMAPE, MASE, Theil’s inequality coefficient, and R².
+The dataset comprises real-world industrial quality deviation records collected from a GMP-regulated pharmaceutical manufacturing environment between 2018 and 2025. A consistent experimental framework was adopted, using a 70\% training and 30\% testing split, with all models evaluated under the same forecasting conditions. Classical approaches, including Holt--Winters, ARIMA, and SARIMA, were compared with multilayer perceptron (MLP), recurrent neural network (RNN), and gated recurrent unit (GRU) architectures. Neural network models were trained using an 11-lag sliding window, with hyperparameters optimized through random search and evaluated over ten independent executions to account for stochastic variations during training. Model performance was assessed using multiple forecasting metrics, including RMSE, MAE, MAPE, sMAPE, MASE, Theil’s U, and $R^2$. In addition, walk-forward evaluation, residual analysis, and statistical hypothesis testing using the Friedman test followed by Conover and Wilcoxon post-hoc analyses with Holm correction were employed to verify forecasting performance and the significance of the observed differences.
 
-Neural network models were trained using an 11-lag sliding window, optimized through random search, and evaluated over ten independent executions to account for stochastic variations during training. Statistical validation was performed using walk-forward evaluation, Friedman tests, and post-hoc comparisons using Conover and Wilcoxon tests with Holm correction.
+The results demonstrated that neural network-based models consistently outperformed classical statistical approaches across all evaluated metrics. The RNN model achieved the best numerical performance, obtaining the lowest forecasting errors and the highest coefficient of determination, while reducing the RMSE by approximately 58.2\% compared with the best-performing classical model (SARIMA). Statistical analyses confirmed significant differences between neural network-based and classical approaches, whereas no significant differences were observed in most comparisons among MLP, RNN, and GRU architectures. Residual analysis further indicated lower error dispersion and more consistent forecasting behavior for neural network-based models.
 
-The results demonstrate that neural network-based models consistently outperform classical statistical approaches in forecasting pharmaceutical deviations. The RNN model achieved the best overall numerical performance, reducing RMSE by approximately 58.2% compared with the best classical benchmark (SARIMA). However, statistical analyses indicated no significant differences among MLP, RNN, and GRU in most comparisons, suggesting that model selection should also consider computational complexity and implementation requirements.
-
-Overall, the findings highlight the potential of data-driven forecasting approaches as decision-support tools for proactive pharmaceutical quality management.
+The findings indicate that neural network-based approaches are more suitable for forecasting pharmaceutical deviation occurrences characterized by nonlinear patterns and complex temporal behavior. However, the absence of significant differences among neural architectures suggests that model selection should also consider computational complexity and implementation requirements. These results highlight the potential of data-driven forecasting methods as decision-support tools for proactive quality management in pharmaceutical manufacturing environments, providing more accurate predictions and reduced forecasting uncertainty.
 
 ## 🔑 Keywords
 
@@ -18,11 +16,15 @@ Pharmaceutical forecasting; Time series analysis; Deep learning; ARIMA; SARIMA; 
 
 ## ⭐ Highlights
 
-Comparison between classical statistical and neural network forecasting approaches
-Evaluation of Holt-Winters, ARIMA, SARIMA, MLP, RNN, and GRU models
-Real GMP pharmaceutical manufacturing data used for weekly deviation forecasting
-RNN reduces RMSE by 58.2% compared with the best classical forecasting model
-Statistical tests confirm significant advantages of neural approaches over classical models
+• Comprehensive comparison between classical statistical and deep learning forecasting models for pharmaceutical
+deviation prediction.
+• Evaluation of Holt-Winters, ARIMA, SARIMA, MLP, RNN, and GRU models under a consistent experimental
+framework.
+• Neural network-based approaches significantly outperform classical models in forecasting accuracy and nonlinear
+pattern learning.
+• RNN achieved the best numerical forecasting performance, with approximately 58.2% RMSE reduction compared with
+SARIMA.
+• Residualanalysisconfirmedlowererrordispersionandmoreconsistentforecastingbehaviorofneuralnetworkmodels.
 
 ## 📌 Project Overview
 
@@ -147,22 +149,39 @@ Non-parametric statistical tests
 
 Pharmaceutical_forecasting/ 
 │ 
-├── Classical Models/ 
-│ ├── Holt-Winters 
+
+├── Classical Models/
+
+│ ├── Holt-Winters
+
 │ ├── ARIMA 
+
 │ └── SARIMA 
+
 │ 
+
 ├── Neural Network Models/ 
+
 │ ├── MLP 
+
 │ ├── RNN 
+
 │ └── GRU 
+
 │ 
+
 ├── Statistical Analysis/ 
+
 │ ├── Evaluation metrics 
-│ ├── Friedman test 
+
+│ ├── Friedman test
+
 │ ├── Conover test 
-│ └── Wilcoxon test  
+
+│ └── Wilcoxon test 
+
 │ 
+
 └── README.md
 
 
